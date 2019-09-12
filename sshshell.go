@@ -44,13 +44,13 @@ func (w *sudoWriter) Write(p []byte) (int, error) {
 	return w.b.Write(p)
 }
 
-func ConnectWithPassword(host, username, pass string, timeout ...time.Duration) (*Client, error) {
+func ConnectWithPassword(host, username, pass string) (*Client, error) {
 	authMethod := ssh.Password(pass)
 
-	return connect(username, host, authMethod, timeout[0])
+	return connect(username, host, authMethod, DefaultTimeout)
 }
 
-func ConnectWithKeyFile(host, username, privKeyPath string, timeout ...time.Duration) (*Client, error) {
+func ConnectWithKeyFile(host, username, privKeyPath string) (*Client, error) {
 	if privKeyPath == "" {
 		currentUser, err := user.Current()
 		if err == nil {
@@ -70,7 +70,7 @@ func ConnectWithKeyFile(host, username, privKeyPath string, timeout ...time.Dura
 
 	authMethod := ssh.PublicKeys(signer)
 
-	return connect(username, host, authMethod, timeout[0])
+	return connect(username, host, authMethod, DefaultTimeout)
 }
 
 
@@ -101,6 +101,7 @@ func connect(username, host string, authMethod ssh.AuthMethod, timeout time.Dura
 	}
 
 	sshConn, chans, reqs, err := ssh.NewClientConn(conn, host, config)
+	fmt.Println(err)
 	if err != nil {
 		return nil, err
 	}
