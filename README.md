@@ -1,5 +1,5 @@
 # SSH Client Script
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkevsersrca%2Fsecureshell.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkevsersrca%2Fsecureshell?ref=badge_shield)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkevsersrca%2Fsecureshell.svg?type=small)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkevsersrca%2Fsecureshell?ref=badge_small)
 
 
     SSH Shell with Go Programming
