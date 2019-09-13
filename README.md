@@ -1,4 +1,6 @@
 # SSH Client Script
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkevsersrca%2Fsecureshell.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkevsersrca%2Fsecureshell?ref=badge_shield)
+
 
     SSH Shell with Go Programming
 
@@ -33,3 +35,7 @@
     }
 
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fkevsersrca%2Fsecureshell.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fkevsersrca%2Fsecureshell?ref=badge_large)
